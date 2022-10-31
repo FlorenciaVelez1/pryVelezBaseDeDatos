@@ -79,6 +79,7 @@
             this.lstDeporte.Name = "lstDeporte";
             this.lstDeporte.Size = new System.Drawing.Size(132, 28);
             this.lstDeporte.TabIndex = 74;
+            this.lstDeporte.SelectedIndexChanged += new System.EventHandler(this.lstDeporte_SelectedIndexChanged);
             // 
             // lblNombre
             // 
@@ -100,6 +101,7 @@
             this.mskTelefono.Size = new System.Drawing.Size(132, 27);
             this.mskTelefono.TabIndex = 73;
             this.mskTelefono.ValidatingType = typeof(int);
+            this.mskTelefono.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskTelefono_MaskInputRejected);
             // 
             // lblApellido
             // 
@@ -120,6 +122,7 @@
             this.mskEdad.Name = "mskEdad";
             this.mskEdad.Size = new System.Drawing.Size(55, 27);
             this.mskEdad.TabIndex = 72;
+            this.mskEdad.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskEdad_MaskInputRejected);
             // 
             // lblDireccion
             // 
@@ -134,6 +137,7 @@
             // 
             // txtDireccion
             // 
+            this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDireccion.Location = new System.Drawing.Point(158, 139);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.MaxLength = 20;
@@ -141,6 +145,7 @@
             this.txtDireccion.ShortcutsEnabled = false;
             this.txtDireccion.Size = new System.Drawing.Size(132, 27);
             this.txtDireccion.TabIndex = 71;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // lblTelefono
             // 
@@ -155,6 +160,7 @@
             // 
             // txtApellido
             // 
+            this.txtApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApellido.Location = new System.Drawing.Point(158, 103);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.MaxLength = 10;
@@ -162,6 +168,8 @@
             this.txtApellido.ShortcutsEnabled = false;
             this.txtApellido.Size = new System.Drawing.Size(132, 27);
             this.txtApellido.TabIndex = 70;
+            this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // lblEdad
             // 
@@ -176,6 +184,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Location = new System.Drawing.Point(158, 67);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 10;
@@ -183,6 +192,8 @@
             this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(132, 27);
             this.txtNombre.TabIndex = 69;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // lblDeporte
             // 
@@ -197,6 +208,7 @@
             // 
             // txtCodigoDeportista
             // 
+            this.txtCodigoDeportista.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodigoDeportista.Location = new System.Drawing.Point(158, 32);
             this.txtCodigoDeportista.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigoDeportista.MaxLength = 5;
@@ -204,6 +216,8 @@
             this.txtCodigoDeportista.ShortcutsEnabled = false;
             this.txtCodigoDeportista.Size = new System.Drawing.Size(132, 27);
             this.txtCodigoDeportista.TabIndex = 68;
+            this.txtCodigoDeportista.TextChanged += new System.EventHandler(this.txtCodigoDeportista_TextChanged);
+            this.txtCodigoDeportista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoDeportista_KeyPress);
             // 
             // cmdRegistrar
             // 
@@ -214,6 +228,7 @@
             this.cmdRegistrar.TabIndex = 75;
             this.cmdRegistrar.Text = "Registrar";
             this.cmdRegistrar.UseVisualStyleBackColor = true;
+            this.cmdRegistrar.Click += new System.EventHandler(this.cmdRegistrar_Click);
             // 
             // cmdLimpiar
             // 
@@ -258,6 +273,7 @@
             this.cmdSalir.TabIndex = 81;
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.UseVisualStyleBackColor = true;
+            this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
             // 
             // StatusConexion
             // 
@@ -281,6 +297,7 @@
             this.Name = "frmRegistroDeportista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistroDeportista";
+            this.Load += new System.EventHandler(this.frmRegistroDeportista_Load);
             this.mrcInformacion.ResumeLayout(false);
             this.mrcInformacion.PerformLayout();
             this.ResumeLayout(false);

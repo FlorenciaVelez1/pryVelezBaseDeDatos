@@ -35,5 +35,13 @@ namespace pryVelezBaseDeDatos
                 StatuConexion.BackColor = Color.Red;
             }
         }
+        private void cmdConsultar_Click(object sender, EventArgs e)
+        {
+            GrillaDeportista.Rows.Clear();
+            //Instanciamos
+            clsDeportista ListarEnGrilla = new clsDeportista();
+            //Se llama al metodo que se creo en la clase para listar en la grilla
+            ListarEnGrilla.ListarGrilla(GrillaDeportista);
+        }
     }
 }

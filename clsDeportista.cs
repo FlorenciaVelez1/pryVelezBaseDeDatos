@@ -118,6 +118,21 @@ namespace pryVelezBaseDeDatos
                 MessageBox.Show("No se ha podido registrar los datos.");
             }
         }
+        public void ListarGrilla(DataGridView GrillaDeportista)
+        {
+            Conexion.ConnectionString = Ruta;
+            Conexion.Open();
+            Comando.Connection = Conexion;
+            Comando.CommandType = CommandType.TableDirect;
+            Comando.CommandText = Tabla;
+            //Adaptador se conecta con la base y trae los datos y se suben los datos a una tabla "virtual"(dataset)
+            Adaptador = new OleDbDataAdapter(Comando);
+            //Tabla virtual
+            DataSet DataConsulta = new DataSet();
+            Adaptador.Fill(DataConsulta);
+            GrillaDeportista.DataSource = DataConsulta.Tables[0];
+            Conexion.Close();
+        }
 
     }
 }
