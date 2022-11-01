@@ -170,6 +170,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.StatusConexion);
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pantalla Principal";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.StatusConexion.ResumeLayout(false);

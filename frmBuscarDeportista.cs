@@ -17,9 +17,96 @@ namespace pryVelezBaseDeDatos
             InitializeComponent();
         }
 
-        private void lblCodigoDeportista_Click(object sender, EventArgs e)
+        private void cmdBuscar_Click(object sender, EventArgs e)
         {
+            clsDeportista BuscarDeportista = new clsDeportista();
+            BuscarDeportista.Buscar(txtCodigoDeportista.Text);
+            if (BuscarDeportista.CodDeportista != txtCodigoDeportista.Text)
+            {
+                MessageBox.Show("El codigo ingresado no se encuentra en la base de datos.");
+            }
+            else
+            {
+                txtNombre.Text = BuscarDeportista.NombreDep;
+                txtApellido.Text = BuscarDeportista.ApellidoDep;
+                txtDireccion.Text = BuscarDeportista.DireccionDep;
+                mskTelefono.Text = Convert.ToString(BuscarDeportista.TelefonoDep);
+                mskEdad.Text = Convert.ToString(BuscarDeportista.EdadDep);
+                lstDeporte.Text = Convert.ToString(BuscarDeportista.DeportesDep);
+                //No se pueden editar las txt
+                txtNombre.ReadOnly = true;
+                txtApellido.ReadOnly = true;
+                txtDireccion.ReadOnly = true;
+                mskTelefono.ReadOnly = true;
+                mskEdad.ReadOnly = true;
+                lstDeporte.Enabled = false; 
+            }
 
+        }
+        private void txtCodigoDeportista_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigoDeportista.Text != "")
+            {
+                cmdBuscar.Enabled = true;
+            }
+        }
+        private void cmdModificar_Click(object sender, EventArgs e)
+        {
+            cmdEliminar.Enabled = false;
+            cmdModificar.Enabled = false;
+            cmdGuardar.Enabled = true;
+            txtDireccion.ReadOnly = false;
+            mskTelefono.ReadOnly = false;
+            mskEdad.ReadOnly = false;
+            lstDeporte.Enabled = true;
+        }
+        private void txtCodigoDeportista_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 & e.KeyChar <= 64) || (e.KeyChar >= 91 & e.KeyChar <= 96) || (e.KeyChar >= 123 & e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se aceptan letras");
+            }
+        }
+        private void cmdGuardar_Click(object sender, EventArgs e)
+        {
+            string CodigoDeportista = txtCodigoDeportista.Text;
+            clsDeportista ModificarDeportista = new clsDeportista();
+            ModificarDeportista.DireccionDep = txtDireccion.Text;
+            ModificarDeportista.TelefonoDep = Convert.ToInt32(mskTelefono.Text);
+            ModificarDeportista.EdadDep = Convert.ToInt32(mskEdad.Text);
+            ModificarDeportista.DeportesDep = lstDeporte.Text;
+            ModificarDeportista.Modificar(CodigoDeportista);
+            MessageBox.Show("La informacion ha sido modificada exitosamente.");
+            Limpiar();
+        }
+
+        private void Limpiar()
+        {
+            txtCodigoDeportista.Text = "";
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtDireccion.Text = "";
+            mskEdad.Text = "";
+            mskTelefono.Text = "";
+            lstDeporte.SelectedIndex = -1;
+            cmdEliminar.Enabled = true;
+            cmdModificar.Enabled = true;
+            txtNombre.ReadOnly = false;
+            txtApellido.ReadOnly = false;
+            txtDireccion.ReadOnly = false;
+        }
+        private void cmdEliminar_Click(object sender, EventArgs e)
+        {
+            string CodigoDeportista = txtCodigoDeportista.Text;
+            clsDeportista EliminarDeportista = new clsDeportista();
+            EliminarDeportista.Eliminar(CodigoDeportista);
+            MessageBox.Show("Datos borrados con exito");
+            Limpiar();
+        }
+        private void cmdSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

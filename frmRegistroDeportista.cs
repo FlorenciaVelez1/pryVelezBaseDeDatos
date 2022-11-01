@@ -20,7 +20,6 @@ namespace pryVelezBaseDeDatos
         {
            this.Close();
         }
-
         private void frmRegistroDeportista_Load(object sender, EventArgs e)
         {
             try
@@ -127,6 +126,10 @@ namespace pryVelezBaseDeDatos
                 e.Handled = true;
                 MessageBox.Show("Solo se aceptan letras");
             }
+        }
+        private void cmdLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }
