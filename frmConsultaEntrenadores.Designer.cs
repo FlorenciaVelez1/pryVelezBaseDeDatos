@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.cmdConsultar = new System.Windows.Forms.Button();
-            this.cmdLimpiar = new System.Windows.Forms.Button();
-            this.grillaConsultaEntrenador = new System.Windows.Forms.DataGridView();
+            this.cmdSalir = new System.Windows.Forms.Button();
+            this.GrillaEntrenador = new System.Windows.Forms.DataGridView();
             this.StatusConexion = new System.Windows.Forms.StatusStrip();
-            ((System.ComponentModel.ISupportInitialize)(this.grillaConsultaEntrenador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrillaEntrenador)).BeginInit();
             this.SuspendLayout();
             // 
             // cmdConsultar
@@ -45,29 +45,31 @@
             this.cmdConsultar.TabIndex = 5;
             this.cmdConsultar.Text = "Consultar";
             this.cmdConsultar.UseVisualStyleBackColor = true;
+            this.cmdConsultar.Click += new System.EventHandler(this.cmdConsultar_Click);
             // 
-            // cmdLimpiar
+            // cmdSalir
             // 
-            this.cmdLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdLimpiar.Location = new System.Drawing.Point(549, 337);
-            this.cmdLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmdLimpiar.Name = "cmdLimpiar";
-            this.cmdLimpiar.Size = new System.Drawing.Size(92, 33);
-            this.cmdLimpiar.TabIndex = 4;
-            this.cmdLimpiar.Text = "Limpiar";
-            this.cmdLimpiar.UseVisualStyleBackColor = true;
+            this.cmdSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdSalir.Location = new System.Drawing.Point(556, 337);
+            this.cmdSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmdSalir.Name = "cmdSalir";
+            this.cmdSalir.Size = new System.Drawing.Size(92, 33);
+            this.cmdSalir.TabIndex = 4;
+            this.cmdSalir.Text = "Salir";
+            this.cmdSalir.UseVisualStyleBackColor = true;
+            this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
             // 
-            // grillaConsultaEntrenador
+            // GrillaEntrenador
             // 
-            this.grillaConsultaEntrenador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grillaConsultaEntrenador.Location = new System.Drawing.Point(12, 11);
-            this.grillaConsultaEntrenador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grillaConsultaEntrenador.Name = "grillaConsultaEntrenador";
-            this.grillaConsultaEntrenador.RowHeadersVisible = false;
-            this.grillaConsultaEntrenador.RowHeadersWidth = 51;
-            this.grillaConsultaEntrenador.RowTemplate.Height = 24;
-            this.grillaConsultaEntrenador.Size = new System.Drawing.Size(751, 310);
-            this.grillaConsultaEntrenador.TabIndex = 3;
+            this.GrillaEntrenador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrillaEntrenador.Location = new System.Drawing.Point(12, 11);
+            this.GrillaEntrenador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GrillaEntrenador.Name = "GrillaEntrenador";
+            this.GrillaEntrenador.RowHeadersVisible = false;
+            this.GrillaEntrenador.RowHeadersWidth = 51;
+            this.GrillaEntrenador.RowTemplate.Height = 24;
+            this.GrillaEntrenador.Size = new System.Drawing.Size(751, 310);
+            this.GrillaEntrenador.TabIndex = 3;
             // 
             // StatusConexion
             // 
@@ -85,13 +87,13 @@
             this.ClientSize = new System.Drawing.Size(773, 418);
             this.Controls.Add(this.StatusConexion);
             this.Controls.Add(this.cmdConsultar);
-            this.Controls.Add(this.cmdLimpiar);
-            this.Controls.Add(this.grillaConsultaEntrenador);
+            this.Controls.Add(this.cmdSalir);
+            this.Controls.Add(this.GrillaEntrenador);
             this.Name = "frmConsultaEntrenadores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmConsultaEntrenadores";
+            this.Text = "Consulta Entrenadores";
             this.Load += new System.EventHandler(this.frmConsultaEntrenadores_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grillaConsultaEntrenador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GrillaEntrenador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,8 +102,8 @@
         #endregion
 
         private System.Windows.Forms.Button cmdConsultar;
-        private System.Windows.Forms.Button cmdLimpiar;
-        private System.Windows.Forms.DataGridView grillaConsultaEntrenador;
+        private System.Windows.Forms.Button cmdSalir;
+        private System.Windows.Forms.DataGridView GrillaEntrenador;
         private System.Windows.Forms.StatusStrip StatusConexion;
     }
 }

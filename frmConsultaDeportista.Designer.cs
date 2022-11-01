@@ -31,6 +31,7 @@
             this.cmdConsultar = new System.Windows.Forms.Button();
             this.GrillaDeportista = new System.Windows.Forms.DataGridView();
             this.StatuConexion = new System.Windows.Forms.StatusStrip();
+            this.cmdSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaDeportista)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,11 +66,24 @@
             this.StatuConexion.TabIndex = 9;
             this.StatuConexion.Text = "statusStrip1";
             // 
+            // cmdSalir
+            // 
+            this.cmdSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdSalir.Location = new System.Drawing.Point(657, 338);
+            this.cmdSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmdSalir.Name = "cmdSalir";
+            this.cmdSalir.Size = new System.Drawing.Size(92, 33);
+            this.cmdSalir.TabIndex = 10;
+            this.cmdSalir.Text = "Salir";
+            this.cmdSalir.UseVisualStyleBackColor = true;
+            this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
+            // 
             // frmConsultaDeportista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 415);
+            this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.StatuConexion);
             this.Controls.Add(this.cmdConsultar);
             this.Controls.Add(this.GrillaDeportista);
@@ -88,5 +102,6 @@
         private System.Windows.Forms.Button cmdConsultar;
         private System.Windows.Forms.DataGridView GrillaDeportista;
         private System.Windows.Forms.StatusStrip StatuConexion;
+        private System.Windows.Forms.Button cmdSalir;
     }
 }

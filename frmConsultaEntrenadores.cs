@@ -16,7 +16,6 @@ namespace pryVelezBaseDeDatos
         {
             InitializeComponent();
         }
-
         private void frmConsultaEntrenadores_Load(object sender, EventArgs e)
         {
             OleDbConnection Conexion = new OleDbConnection();
@@ -27,6 +26,18 @@ namespace pryVelezBaseDeDatos
             Conexion.Open();
             //Con esto indico que la base de datos se conecto de manera exitosa
             StatusConexion.BackColor = Color.Green;
+        }
+        private void cmdSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void cmdConsultar_Click(object sender, EventArgs e)
+        {
+            GrillaEntrenador.Rows.Clear();
+            //Instanciamos
+            clsEntrenador  ListarGrilla = new clsEntrenador();
+            //Se llama al metodo que se creo en la clase para listar en la grilla
+            ListarGrilla.Listar(GrillaEntrenador);
         }
     }
 }

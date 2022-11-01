@@ -43,5 +43,9 @@ namespace pryVelezBaseDeDatos
             //Se llama al metodo que se creo en la clase para listar en la grilla
             ListarEnGrilla.ListarGrilla(GrillaDeportista);
         }
+        private void cmdSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

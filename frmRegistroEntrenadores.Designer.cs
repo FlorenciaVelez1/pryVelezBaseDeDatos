@@ -37,13 +37,13 @@
             this.cmdLimpiar = new System.Windows.Forms.Button();
             this.cmdRegistrar = new System.Windows.Forms.Button();
             this.mrcInformacion = new System.Windows.Forms.GroupBox();
-            this.cmdSalir = new System.Windows.Forms.Button();
             this.lstDeporte = new System.Windows.Forms.ComboBox();
             this.txtProvincia = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtCodigoEntrenador = new System.Windows.Forms.TextBox();
+            this.txtCodigoDeportista = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.cmdSalir = new System.Windows.Forms.Button();
             this.StatusConexion = new System.Windows.Forms.StatusStrip();
             this.mrcInformacion.SuspendLayout();
             this.SuspendLayout();
@@ -119,20 +119,22 @@
             this.cmdLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdLimpiar.Location = new System.Drawing.Point(129, 320);
             this.cmdLimpiar.Name = "cmdLimpiar";
-            this.cmdLimpiar.Size = new System.Drawing.Size(88, 30);
+            this.cmdLimpiar.Size = new System.Drawing.Size(86, 38);
             this.cmdLimpiar.TabIndex = 78;
             this.cmdLimpiar.Text = "Limpiar";
             this.cmdLimpiar.UseVisualStyleBackColor = true;
+            this.cmdLimpiar.Click += new System.EventHandler(this.cmdLimpiar_Click);
             // 
             // cmdRegistrar
             // 
             this.cmdRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdRegistrar.Location = new System.Drawing.Point(251, 320);
             this.cmdRegistrar.Name = "cmdRegistrar";
-            this.cmdRegistrar.Size = new System.Drawing.Size(88, 30);
+            this.cmdRegistrar.Size = new System.Drawing.Size(86, 38);
             this.cmdRegistrar.TabIndex = 77;
             this.cmdRegistrar.Text = "Registrar";
             this.cmdRegistrar.UseVisualStyleBackColor = true;
+            this.cmdRegistrar.Click += new System.EventHandler(this.cmdRegistrar_Click);
             // 
             // mrcInformacion
             // 
@@ -140,7 +142,7 @@
             this.mrcInformacion.Controls.Add(this.txtProvincia);
             this.mrcInformacion.Controls.Add(this.txtDireccion);
             this.mrcInformacion.Controls.Add(this.txtApellido);
-            this.mrcInformacion.Controls.Add(this.txtCodigoEntrenador);
+            this.mrcInformacion.Controls.Add(this.txtCodigoDeportista);
             this.mrcInformacion.Controls.Add(this.txtNombre);
             this.mrcInformacion.Controls.Add(this.lblCodigoEntrenador);
             this.mrcInformacion.Controls.Add(this.lblNombre);
@@ -155,16 +157,6 @@
             this.mrcInformacion.TabIndex = 79;
             this.mrcInformacion.TabStop = false;
             this.mrcInformacion.Text = "Informacion Entrenador";
-            // 
-            // cmdSalir
-            // 
-            this.cmdSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSalir.Location = new System.Drawing.Point(7, 320);
-            this.cmdSalir.Name = "cmdSalir";
-            this.cmdSalir.Size = new System.Drawing.Size(88, 30);
-            this.cmdSalir.TabIndex = 80;
-            this.cmdSalir.Text = "Salir";
-            this.cmdSalir.UseVisualStyleBackColor = true;
             // 
             // lstDeporte
             // 
@@ -188,6 +180,7 @@
             // 
             // txtProvincia
             // 
+            this.txtProvincia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProvincia.Location = new System.Drawing.Point(169, 190);
             this.txtProvincia.Margin = new System.Windows.Forms.Padding(4);
@@ -199,6 +192,7 @@
             // 
             // txtDireccion
             // 
+            this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(169, 148);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
@@ -209,6 +203,7 @@
             // 
             // txtApellido
             // 
+            this.txtApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.Location = new System.Drawing.Point(169, 112);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
@@ -218,19 +213,21 @@
             this.txtApellido.Size = new System.Drawing.Size(132, 27);
             this.txtApellido.TabIndex = 66;
             // 
-            // txtCodigoEntrenador
+            // txtCodigoDeportista
             // 
-            this.txtCodigoEntrenador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoEntrenador.Location = new System.Drawing.Point(169, 41);
-            this.txtCodigoEntrenador.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCodigoEntrenador.MaxLength = 5;
-            this.txtCodigoEntrenador.Name = "txtCodigoEntrenador";
-            this.txtCodigoEntrenador.ShortcutsEnabled = false;
-            this.txtCodigoEntrenador.Size = new System.Drawing.Size(132, 27);
-            this.txtCodigoEntrenador.TabIndex = 64;
+            this.txtCodigoDeportista.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCodigoDeportista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoDeportista.Location = new System.Drawing.Point(169, 41);
+            this.txtCodigoDeportista.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigoDeportista.MaxLength = 5;
+            this.txtCodigoDeportista.Name = "txtCodigoDeportista";
+            this.txtCodigoDeportista.ShortcutsEnabled = false;
+            this.txtCodigoDeportista.Size = new System.Drawing.Size(132, 27);
+            this.txtCodigoDeportista.TabIndex = 64;
             // 
             // txtNombre
             // 
+            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(169, 77);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
@@ -240,12 +237,23 @@
             this.txtNombre.Size = new System.Drawing.Size(132, 27);
             this.txtNombre.TabIndex = 65;
             // 
+            // cmdSalir
+            // 
+            this.cmdSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdSalir.Location = new System.Drawing.Point(7, 320);
+            this.cmdSalir.Name = "cmdSalir";
+            this.cmdSalir.Size = new System.Drawing.Size(86, 38);
+            this.cmdSalir.TabIndex = 80;
+            this.cmdSalir.Text = "Salir";
+            this.cmdSalir.UseVisualStyleBackColor = true;
+            this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
+            // 
             // StatusConexion
             // 
             this.StatusConexion.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.StatusConexion.Location = new System.Drawing.Point(0, 375);
+            this.StatusConexion.Location = new System.Drawing.Point(0, 381);
             this.StatusConexion.Name = "StatusConexion";
-            this.StatusConexion.Size = new System.Drawing.Size(361, 24);
+            this.StatusConexion.Size = new System.Drawing.Size(359, 22);
             this.StatusConexion.TabIndex = 81;
             this.StatusConexion.Text = "statusStrip1";
             // 
@@ -253,7 +261,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 399);
+            this.ClientSize = new System.Drawing.Size(359, 403);
             this.Controls.Add(this.StatusConexion);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.mrcInformacion);
@@ -262,6 +270,7 @@
             this.Name = "frmRegistroEntrenadores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro Entrenadores";
+            this.Load += new System.EventHandler(this.frmRegistroEntrenadores_Load);
             this.mrcInformacion.ResumeLayout(false);
             this.mrcInformacion.PerformLayout();
             this.ResumeLayout(false);
@@ -285,7 +294,7 @@
         private System.Windows.Forms.TextBox txtProvincia;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtCodigoEntrenador;
+        private System.Windows.Forms.TextBox txtCodigoDeportista;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.StatusStrip StatusConexion;
     }
