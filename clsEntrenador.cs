@@ -127,7 +127,7 @@ namespace pryVelezBaseDeDatos
         }
         public void Modificar(string Codigo)
         {
-            string Sql = "UPDATE ENTRENADORES SET DIRECCION= '" + Direccion + "', DEPORTE='" + Deporte + "' WHERE [CODIGO DEPORTISTA] = '" + Codigo + "'";
+            string Sql = "UPDATE ENTRENADORES SET NOMBRE= '" + Nombre + "', APELLIDO= '" + Apellido + "', DIRECCION= '" + Direccion + "', DEPORTE='" + Deporte + "' WHERE [CODIGO DEPORTISTA] = '" + Codigo + "'";
             Conexion.ConnectionString = Ruta;
             Conexion.Open();
             Comando.Connection = Conexion;

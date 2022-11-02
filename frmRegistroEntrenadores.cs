@@ -47,7 +47,7 @@ namespace pryVelezBaseDeDatos
             Registro.Deporte = Convert.ToString(lstDeporte.SelectedItem);
             //Llamo al procedimiento creado en la clase para agregar el dato nuevo
             Registro.Agregar();
-            MessageBox.Show("Se ha registrado correctamente el nuevo Deportista");
+            MessageBox.Show("Se ha registrado correctamente el nuevo Entrenador");
             Limpiar();
             txtCodigoDeportista.Focus();
         }

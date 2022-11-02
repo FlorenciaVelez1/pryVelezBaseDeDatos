@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.OleDb;
 namespace pryVelezBaseDeDatos
 {
     public partial class frmBuscarDeportista : Form
@@ -39,7 +39,12 @@ namespace pryVelezBaseDeDatos
                 txtDireccion.ReadOnly = true;
                 mskTelefono.ReadOnly = true;
                 mskEdad.ReadOnly = true;
-                lstDeporte.Enabled = false; 
+                lstDeporte.Enabled = false;
+                //habilito los botones
+                cmdEliminar.Enabled = true;
+                cmdGuardar.Enabled = true;
+                cmdModificar.Enabled = true;
+
             }
 
         }
@@ -52,9 +57,13 @@ namespace pryVelezBaseDeDatos
         }
         private void cmdModificar_Click(object sender, EventArgs e)
         {
+            //Deshabilito los botones que no uso
             cmdEliminar.Enabled = false;
             cmdModificar.Enabled = false;
             cmdGuardar.Enabled = true;
+            //Habilito los txt y lst para editar
+            txtNombre.ReadOnly = false;
+            txtApellido.ReadOnly = false;
             txtDireccion.ReadOnly = false;
             mskTelefono.ReadOnly = false;
             mskEdad.ReadOnly = false;
@@ -72,6 +81,8 @@ namespace pryVelezBaseDeDatos
         {
             string CodigoDeportista = txtCodigoDeportista.Text;
             clsDeportista ModificarDeportista = new clsDeportista();
+            ModificarDeportista.NombreDep = txtNombre.Text;
+            ModificarDeportista.ApellidoDep = txtApellido.Text;
             ModificarDeportista.DireccionDep = txtDireccion.Text;
             ModificarDeportista.TelefonoDep = Convert.ToInt32(mskTelefono.Text);
             ModificarDeportista.EdadDep = Convert.ToInt32(mskEdad.Text);
@@ -83,6 +94,7 @@ namespace pryVelezBaseDeDatos
 
         private void Limpiar()
         {
+            //Limpio los txt y lst
             txtCodigoDeportista.Text = "";
             txtNombre.Text = "";
             txtApellido.Text = "";
@@ -90,11 +102,17 @@ namespace pryVelezBaseDeDatos
             mskEdad.Text = "";
             mskTelefono.Text = "";
             lstDeporte.SelectedIndex = -1;
-            cmdEliminar.Enabled = true;
-            cmdModificar.Enabled = true;
-            txtNombre.ReadOnly = false;
-            txtApellido.ReadOnly = false;
-            txtDireccion.ReadOnly = false;
+            //Deshabilito los botones
+            cmdEliminar.Enabled = false;
+            cmdModificar.Enabled = false;
+            cmdGuardar.Enabled = false;
+            //No se editan los txt y lst
+            txtNombre.ReadOnly = true;
+            txtApellido.ReadOnly = true;
+            txtDireccion.ReadOnly = true;
+            mskTelefono.ReadOnly = true;
+            mskEdad.ReadOnly = true;
+            lstDeporte.Enabled = false;
         }
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
@@ -107,6 +125,23 @@ namespace pryVelezBaseDeDatos
         private void cmdSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void frmBuscarDeportista_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                OleDbConnection Conexion = new OleDbConnection();
+                OleDbCommand Comando = new OleDbCommand();
+                OleDbDataAdapter Adaptador = new OleDbDataAdapter();
+                string Ruta = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DEPORTE.accdb";
+                Conexion = new OleDbConnection(Ruta);
+                Conexion.Open();
+                StatusConexion.BackColor = Color.Green;
+            }
+            catch (Exception)
+            {
+                StatusConexion.BackColor = Color.Red;
+            }
         }
     }
 }

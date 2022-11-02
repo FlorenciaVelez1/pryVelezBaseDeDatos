@@ -37,11 +37,11 @@
             // 
             // cmdConsultar
             // 
-            this.cmdConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdConsultar.Location = new System.Drawing.Point(791, 338);
+            this.cmdConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdConsultar.Location = new System.Drawing.Point(775, 337);
             this.cmdConsultar.Name = "cmdConsultar";
-            this.cmdConsultar.Size = new System.Drawing.Size(92, 33);
-            this.cmdConsultar.TabIndex = 8;
+            this.cmdConsultar.Size = new System.Drawing.Size(110, 38);
+            this.cmdConsultar.TabIndex = 1;
             this.cmdConsultar.Text = "Consultar";
             this.cmdConsultar.UseVisualStyleBackColor = true;
             this.cmdConsultar.Click += new System.EventHandler(this.cmdConsultar_Click);
@@ -51,6 +51,7 @@
             this.GrillaDeportista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrillaDeportista.Location = new System.Drawing.Point(12, 12);
             this.GrillaDeportista.Name = "GrillaDeportista";
+            this.GrillaDeportista.ReadOnly = true;
             this.GrillaDeportista.RowHeadersVisible = false;
             this.GrillaDeportista.RowHeadersWidth = 51;
             this.GrillaDeportista.RowTemplate.Height = 24;
@@ -68,12 +69,12 @@
             // 
             // cmdSalir
             // 
-            this.cmdSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSalir.Location = new System.Drawing.Point(657, 338);
+            this.cmdSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdSalir.Location = new System.Drawing.Point(641, 337);
             this.cmdSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdSalir.Name = "cmdSalir";
-            this.cmdSalir.Size = new System.Drawing.Size(92, 33);
-            this.cmdSalir.TabIndex = 10;
+            this.cmdSalir.Size = new System.Drawing.Size(110, 38);
+            this.cmdSalir.TabIndex = 2;
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.UseVisualStyleBackColor = true;
             this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);

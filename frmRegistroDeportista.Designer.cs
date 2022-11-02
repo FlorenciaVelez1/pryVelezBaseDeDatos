@@ -74,11 +74,11 @@
             "ATLETISMO",
             "PADEL",
             "HANDBALL"});
-            this.lstDeporte.Location = new System.Drawing.Point(170, 251);
+            this.lstDeporte.Location = new System.Drawing.Point(181, 252);
             this.lstDeporte.Margin = new System.Windows.Forms.Padding(4);
             this.lstDeporte.Name = "lstDeporte";
             this.lstDeporte.Size = new System.Drawing.Size(132, 28);
-            this.lstDeporte.TabIndex = 74;
+            this.lstDeporte.TabIndex = 7;
             this.lstDeporte.SelectedIndexChanged += new System.EventHandler(this.lstDeporte_SelectedIndexChanged);
             // 
             // lblNombre
@@ -94,12 +94,12 @@
             // 
             // mskTelefono
             // 
-            this.mskTelefono.Location = new System.Drawing.Point(170, 174);
+            this.mskTelefono.Location = new System.Drawing.Point(181, 175);
             this.mskTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.mskTelefono.Mask = "000000000";
             this.mskTelefono.Name = "mskTelefono";
             this.mskTelefono.Size = new System.Drawing.Size(132, 27);
-            this.mskTelefono.TabIndex = 73;
+            this.mskTelefono.TabIndex = 5;
             this.mskTelefono.ValidatingType = typeof(int);
             this.mskTelefono.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskTelefono_MaskInputRejected);
             // 
@@ -116,12 +116,12 @@
             // 
             // mskEdad
             // 
-            this.mskEdad.Location = new System.Drawing.Point(170, 214);
+            this.mskEdad.Location = new System.Drawing.Point(181, 215);
             this.mskEdad.Margin = new System.Windows.Forms.Padding(4);
             this.mskEdad.Mask = "00";
             this.mskEdad.Name = "mskEdad";
             this.mskEdad.Size = new System.Drawing.Size(55, 27);
-            this.mskEdad.TabIndex = 72;
+            this.mskEdad.TabIndex = 6;
             this.mskEdad.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskEdad_MaskInputRejected);
             // 
             // lblDireccion
@@ -138,13 +138,13 @@
             // txtDireccion
             // 
             this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtDireccion.Location = new System.Drawing.Point(170, 139);
+            this.txtDireccion.Location = new System.Drawing.Point(181, 140);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.MaxLength = 20;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.ShortcutsEnabled = false;
             this.txtDireccion.Size = new System.Drawing.Size(132, 27);
-            this.txtDireccion.TabIndex = 71;
+            this.txtDireccion.TabIndex = 4;
             this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // lblTelefono
@@ -161,13 +161,13 @@
             // txtApellido
             // 
             this.txtApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtApellido.Location = new System.Drawing.Point(170, 103);
+            this.txtApellido.Location = new System.Drawing.Point(181, 104);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.MaxLength = 10;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.ShortcutsEnabled = false;
             this.txtApellido.Size = new System.Drawing.Size(132, 27);
-            this.txtApellido.TabIndex = 70;
+            this.txtApellido.TabIndex = 3;
             this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
@@ -185,13 +185,13 @@
             // txtNombre
             // 
             this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNombre.Location = new System.Drawing.Point(170, 67);
+            this.txtNombre.Location = new System.Drawing.Point(181, 68);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 10;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(132, 27);
-            this.txtNombre.TabIndex = 69;
+            this.txtNombre.TabIndex = 2;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -209,23 +209,23 @@
             // txtCodigoDeportista
             // 
             this.txtCodigoDeportista.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCodigoDeportista.Location = new System.Drawing.Point(170, 32);
+            this.txtCodigoDeportista.Location = new System.Drawing.Point(181, 33);
             this.txtCodigoDeportista.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigoDeportista.MaxLength = 5;
             this.txtCodigoDeportista.Name = "txtCodigoDeportista";
             this.txtCodigoDeportista.ShortcutsEnabled = false;
             this.txtCodigoDeportista.Size = new System.Drawing.Size(132, 27);
-            this.txtCodigoDeportista.TabIndex = 68;
+            this.txtCodigoDeportista.TabIndex = 1;
             this.txtCodigoDeportista.TextChanged += new System.EventHandler(this.txtCodigoDeportista_TextChanged);
             this.txtCodigoDeportista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoDeportista_KeyPress);
             // 
             // cmdRegistrar
             // 
             this.cmdRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdRegistrar.Location = new System.Drawing.Point(235, 343);
+            this.cmdRegistrar.Location = new System.Drawing.Point(240, 329);
             this.cmdRegistrar.Name = "cmdRegistrar";
-            this.cmdRegistrar.Size = new System.Drawing.Size(98, 30);
-            this.cmdRegistrar.TabIndex = 75;
+            this.cmdRegistrar.Size = new System.Drawing.Size(110, 38);
+            this.cmdRegistrar.TabIndex = 10;
             this.cmdRegistrar.Text = "Registrar";
             this.cmdRegistrar.UseVisualStyleBackColor = true;
             this.cmdRegistrar.Click += new System.EventHandler(this.cmdRegistrar_Click);
@@ -233,10 +233,10 @@
             // cmdLimpiar
             // 
             this.cmdLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdLimpiar.Location = new System.Drawing.Point(122, 343);
+            this.cmdLimpiar.Location = new System.Drawing.Point(127, 329);
             this.cmdLimpiar.Name = "cmdLimpiar";
-            this.cmdLimpiar.Size = new System.Drawing.Size(98, 30);
-            this.cmdLimpiar.TabIndex = 76;
+            this.cmdLimpiar.Size = new System.Drawing.Size(110, 38);
+            this.cmdLimpiar.TabIndex = 9;
             this.cmdLimpiar.Text = "Limpiar";
             this.cmdLimpiar.UseVisualStyleBackColor = true;
             this.cmdLimpiar.Click += new System.EventHandler(this.cmdLimpiar_Click);
@@ -260,7 +260,7 @@
             this.mrcInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcInformacion.Location = new System.Drawing.Point(12, 12);
             this.mrcInformacion.Name = "mrcInformacion";
-            this.mrcInformacion.Size = new System.Drawing.Size(321, 320);
+            this.mrcInformacion.Size = new System.Drawing.Size(337, 299);
             this.mrcInformacion.TabIndex = 77;
             this.mrcInformacion.TabStop = false;
             this.mrcInformacion.Text = "Informacion Deportista";
@@ -268,10 +268,10 @@
             // cmdSalir
             // 
             this.cmdSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSalir.Location = new System.Drawing.Point(9, 343);
+            this.cmdSalir.Location = new System.Drawing.Point(14, 329);
             this.cmdSalir.Name = "cmdSalir";
-            this.cmdSalir.Size = new System.Drawing.Size(98, 30);
-            this.cmdSalir.TabIndex = 81;
+            this.cmdSalir.Size = new System.Drawing.Size(110, 38);
+            this.cmdSalir.TabIndex = 8;
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.UseVisualStyleBackColor = true;
             this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
@@ -279,7 +279,7 @@
             // StatusConexion
             // 
             this.StatusConexion.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.StatusConexion.Location = new System.Drawing.Point(0, 400);
+            this.StatusConexion.Location = new System.Drawing.Point(0, 386);
             this.StatusConexion.Name = "StatusConexion";
             this.StatusConexion.Size = new System.Drawing.Size(361, 22);
             this.StatusConexion.TabIndex = 82;
@@ -289,7 +289,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 422);
+            this.ClientSize = new System.Drawing.Size(361, 408);
             this.Controls.Add(this.StatusConexion);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.mrcInformacion);
