@@ -189,6 +189,7 @@
             this.txtProvincia.ShortcutsEnabled = false;
             this.txtProvincia.Size = new System.Drawing.Size(156, 27);
             this.txtProvincia.TabIndex = 5;
+            this.txtProvincia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProvincia_KeyPress);
             // 
             // txtDireccion
             // 
@@ -212,6 +213,7 @@
             this.txtApellido.ShortcutsEnabled = false;
             this.txtApellido.Size = new System.Drawing.Size(156, 27);
             this.txtApellido.TabIndex = 3;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtCodigoDeportista
             // 
@@ -224,6 +226,7 @@
             this.txtCodigoDeportista.ShortcutsEnabled = false;
             this.txtCodigoDeportista.Size = new System.Drawing.Size(156, 27);
             this.txtCodigoDeportista.TabIndex = 1;
+            this.txtCodigoDeportista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoDeportista_KeyPress);
             // 
             // txtNombre
             // 
@@ -236,6 +239,7 @@
             this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(156, 27);
             this.txtNombre.TabIndex = 2;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // cmdSalir
             // 

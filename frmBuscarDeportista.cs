@@ -69,14 +69,6 @@ namespace pryVelezBaseDeDatos
             mskEdad.ReadOnly = false;
             lstDeporte.Enabled = true;
         }
-        private void txtCodigoDeportista_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= 32 & e.KeyChar <= 64) || (e.KeyChar >= 91 & e.KeyChar <= 96) || (e.KeyChar >= 123 & e.KeyChar <= 255))
-            {
-                e.Handled = true;
-                MessageBox.Show("Solo se aceptan letras");
-            }
-        }
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
             string CodigoDeportista = txtCodigoDeportista.Text;
@@ -113,6 +105,7 @@ namespace pryVelezBaseDeDatos
             mskTelefono.ReadOnly = true;
             mskEdad.ReadOnly = true;
             lstDeporte.Enabled = false;
+            txtCodigoDeportista.Focus();
         }
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
@@ -141,6 +134,31 @@ namespace pryVelezBaseDeDatos
             catch (Exception)
             {
                 StatusConexion.BackColor = Color.Red;
+            }
+        }
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 & e.KeyChar <= 64) || (e.KeyChar >= 91 & e.KeyChar <= 96) || (e.KeyChar >= 123 & e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se aceptan letras");
+            }
+        }
+        private void txtCodigoDeportista_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if ((e.KeyChar >= 32 & e.KeyChar <= 64) || (e.KeyChar >= 91 & e.KeyChar <= 96) || (e.KeyChar >= 123 & e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se aceptan letras");
+            }
+        }
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 & e.KeyChar <= 64) || (e.KeyChar >= 91 & e.KeyChar <= 96) || (e.KeyChar >= 123 & e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se aceptan letras");
             }
         }
     }

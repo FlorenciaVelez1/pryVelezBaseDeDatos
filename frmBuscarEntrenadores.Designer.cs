@@ -65,7 +65,7 @@
             this.cmdEliminar.Location = new System.Drawing.Point(17, 373);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(110, 38);
-            this.cmdEliminar.TabIndex = 80;
+            this.cmdEliminar.TabIndex = 8;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
             this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
@@ -108,7 +108,7 @@
             this.lstDeporte.Margin = new System.Windows.Forms.Padding(4);
             this.lstDeporte.Name = "lstDeporte";
             this.lstDeporte.Size = new System.Drawing.Size(215, 28);
-            this.lstDeporte.TabIndex = 6;
+            this.lstDeporte.TabIndex = 7;
             // 
             // txtProvincia
             // 
@@ -120,7 +120,8 @@
             this.txtProvincia.Name = "txtProvincia";
             this.txtProvincia.ShortcutsEnabled = false;
             this.txtProvincia.Size = new System.Drawing.Size(215, 27);
-            this.txtProvincia.TabIndex = 5;
+            this.txtProvincia.TabIndex = 6;
+            this.txtProvincia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProvincia_KeyPress);
             // 
             // txtDireccion
             // 
@@ -131,7 +132,7 @@
             this.txtDireccion.MaxLength = 25;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(215, 27);
-            this.txtDireccion.TabIndex = 4;
+            this.txtDireccion.TabIndex = 5;
             // 
             // txtApellido
             // 
@@ -143,7 +144,8 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.ShortcutsEnabled = false;
             this.txtApellido.Size = new System.Drawing.Size(215, 27);
-            this.txtApellido.TabIndex = 3;
+            this.txtApellido.TabIndex = 4;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
             // 
@@ -155,7 +157,8 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(215, 27);
-            this.txtNombre.TabIndex = 2;
+            this.txtNombre.TabIndex = 3;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // lblNombre
             // 
@@ -218,7 +221,7 @@
             this.cmdModificar.Location = new System.Drawing.Point(138, 373);
             this.cmdModificar.Name = "cmdModificar";
             this.cmdModificar.Size = new System.Drawing.Size(110, 38);
-            this.cmdModificar.TabIndex = 81;
+            this.cmdModificar.TabIndex = 9;
             this.cmdModificar.Text = "Modificar";
             this.cmdModificar.UseVisualStyleBackColor = true;
             this.cmdModificar.Click += new System.EventHandler(this.cmdModificar_Click);
@@ -229,7 +232,7 @@
             this.cmdGuardar.Location = new System.Drawing.Point(259, 373);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(110, 38);
-            this.cmdGuardar.TabIndex = 82;
+            this.cmdGuardar.TabIndex = 10;
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.UseVisualStyleBackColor = true;
             this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
@@ -240,7 +243,7 @@
             this.cmdSalir.Location = new System.Drawing.Point(17, 55);
             this.cmdSalir.Name = "cmdSalir";
             this.cmdSalir.Size = new System.Drawing.Size(110, 38);
-            this.cmdSalir.TabIndex = 87;
+            this.cmdSalir.TabIndex = 11;
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.UseVisualStyleBackColor = true;
             this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
@@ -251,7 +254,7 @@
             this.cmdBuscar.Location = new System.Drawing.Point(259, 55);
             this.cmdBuscar.Name = "cmdBuscar";
             this.cmdBuscar.Size = new System.Drawing.Size(110, 38);
-            this.cmdBuscar.TabIndex = 85;
+            this.cmdBuscar.TabIndex = 2;
             this.cmdBuscar.Text = "Buscar";
             this.cmdBuscar.UseVisualStyleBackColor = true;
             this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
@@ -266,7 +269,8 @@
             this.txtCodigoDeportista.Name = "txtCodigoDeportista";
             this.txtCodigoDeportista.ShortcutsEnabled = false;
             this.txtCodigoDeportista.Size = new System.Drawing.Size(166, 27);
-            this.txtCodigoDeportista.TabIndex = 84;
+            this.txtCodigoDeportista.TabIndex = 1;
+            this.txtCodigoDeportista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoDeportista_KeyPress);
             // 
             // lblCodigoDeportista
             // 

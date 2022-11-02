@@ -119,5 +119,37 @@ namespace pryVelezBaseDeDatos
         {
             this.Close();
         }
+        private void txtCodigoDeportista_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 & e.KeyChar <= 64) || (e.KeyChar >= 91 & e.KeyChar <= 96) || (e.KeyChar >= 123 & e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se aceptan letras");
+            }
+        }
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 & e.KeyChar <= 64) || (e.KeyChar >= 91 & e.KeyChar <= 96) || (e.KeyChar >= 123 & e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se aceptan letras");
+            }
+        }
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 & e.KeyChar <= 64) || (e.KeyChar >= 91 & e.KeyChar <= 96) || (e.KeyChar >= 123 & e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se aceptan letras");
+            }
+        }
+        private void txtProvincia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 & e.KeyChar <= 64) || (e.KeyChar >= 91 & e.KeyChar <= 96) || (e.KeyChar >= 123 & e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se aceptan letras");
+            }
+        }
     }
 }
