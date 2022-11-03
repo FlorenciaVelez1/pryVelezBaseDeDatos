@@ -47,13 +47,14 @@
             this.cmdBuscar = new System.Windows.Forms.Button();
             this.txtCodigoDeportista = new System.Windows.Forms.TextBox();
             this.lblCodigoDeportista = new System.Windows.Forms.Label();
+            this.cmdCancelar = new System.Windows.Forms.Button();
             this.mrcInformacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // StatusConexion
             // 
             this.StatusConexion.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.StatusConexion.Location = new System.Drawing.Point(0, 424);
+            this.StatusConexion.Location = new System.Drawing.Point(0, 439);
             this.StatusConexion.Name = "StatusConexion";
             this.StatusConexion.Size = new System.Drawing.Size(386, 22);
             this.StatusConexion.TabIndex = 7;
@@ -62,7 +63,7 @@
             // cmdEliminar
             // 
             this.cmdEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdEliminar.Location = new System.Drawing.Point(17, 373);
+            this.cmdEliminar.Location = new System.Drawing.Point(13, 367);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(110, 38);
             this.cmdEliminar.TabIndex = 8;
@@ -121,6 +122,7 @@
             this.txtProvincia.ShortcutsEnabled = false;
             this.txtProvincia.Size = new System.Drawing.Size(215, 27);
             this.txtProvincia.TabIndex = 6;
+            this.txtProvincia.TextChanged += new System.EventHandler(this.txtProvincia_TextChanged);
             this.txtProvincia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProvincia_KeyPress);
             // 
             // txtDireccion
@@ -133,6 +135,7 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(215, 27);
             this.txtDireccion.TabIndex = 5;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // txtApellido
             // 
@@ -145,6 +148,7 @@
             this.txtApellido.ShortcutsEnabled = false;
             this.txtApellido.Size = new System.Drawing.Size(215, 27);
             this.txtApellido.TabIndex = 4;
+            this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
@@ -158,6 +162,7 @@
             this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(215, 27);
             this.txtNombre.TabIndex = 3;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // lblNombre
@@ -218,7 +223,7 @@
             // cmdModificar
             // 
             this.cmdModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdModificar.Location = new System.Drawing.Point(138, 373);
+            this.cmdModificar.Location = new System.Drawing.Point(134, 367);
             this.cmdModificar.Name = "cmdModificar";
             this.cmdModificar.Size = new System.Drawing.Size(110, 38);
             this.cmdModificar.TabIndex = 9;
@@ -229,7 +234,7 @@
             // cmdGuardar
             // 
             this.cmdGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdGuardar.Location = new System.Drawing.Point(259, 373);
+            this.cmdGuardar.Location = new System.Drawing.Point(255, 367);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(110, 38);
             this.cmdGuardar.TabIndex = 10;
@@ -270,6 +275,7 @@
             this.txtCodigoDeportista.ShortcutsEnabled = false;
             this.txtCodigoDeportista.Size = new System.Drawing.Size(166, 27);
             this.txtCodigoDeportista.TabIndex = 1;
+            this.txtCodigoDeportista.TextChanged += new System.EventHandler(this.txtCodigoDeportista_TextChanged);
             this.txtCodigoDeportista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoDeportista_KeyPress);
             // 
             // lblCodigoDeportista
@@ -283,11 +289,23 @@
             this.lblCodigoDeportista.TabIndex = 86;
             this.lblCodigoDeportista.Text = "Codigo Deportista:";
             // 
+            // cmdCancelar
+            // 
+            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.Location = new System.Drawing.Point(134, 411);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(110, 38);
+            this.cmdCancelar.TabIndex = 87;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.UseVisualStyleBackColor = true;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
+            // 
             // frmBuscarEntrenadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 446);
+            this.ClientSize = new System.Drawing.Size(386, 461);
+            this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.cmdBuscar);
             this.Controls.Add(this.txtCodigoDeportista);
@@ -329,5 +347,6 @@
         private System.Windows.Forms.Button cmdBuscar;
         private System.Windows.Forms.TextBox txtCodigoDeportista;
         private System.Windows.Forms.Label lblCodigoDeportista;
+        private System.Windows.Forms.Button cmdCancelar;
     }
 }

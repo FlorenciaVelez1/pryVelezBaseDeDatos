@@ -49,13 +49,14 @@
             this.cmdModificar = new System.Windows.Forms.Button();
             this.cmdGuardar = new System.Windows.Forms.Button();
             this.cmdSalir = new System.Windows.Forms.Button();
+            this.cmdCancelar = new System.Windows.Forms.Button();
             this.mrcInformacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // StatusConexion
             // 
             this.StatusConexion.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.StatusConexion.Location = new System.Drawing.Point(0, 448);
+            this.StatusConexion.Location = new System.Drawing.Point(0, 458);
             this.StatusConexion.Name = "StatusConexion";
             this.StatusConexion.Size = new System.Drawing.Size(386, 22);
             this.StatusConexion.TabIndex = 7;
@@ -78,7 +79,7 @@
             this.mrcInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcInformacion.Location = new System.Drawing.Point(12, 100);
             this.mrcInformacion.Name = "mrcInformacion";
-            this.mrcInformacion.Size = new System.Drawing.Size(352, 288);
+            this.mrcInformacion.Size = new System.Drawing.Size(352, 276);
             this.mrcInformacion.TabIndex = 78;
             this.mrcInformacion.TabStop = false;
             this.mrcInformacion.Text = "Informacion Deportista";
@@ -94,6 +95,7 @@
             this.txtDireccion.ShortcutsEnabled = false;
             this.txtDireccion.Size = new System.Drawing.Size(179, 27);
             this.txtDireccion.TabIndex = 5;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // lblDeporte
             // 
@@ -117,6 +119,7 @@
             this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(179, 27);
             this.txtNombre.TabIndex = 3;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // lstDeporte
@@ -138,6 +141,7 @@
             this.lstDeporte.Name = "lstDeporte";
             this.lstDeporte.Size = new System.Drawing.Size(179, 28);
             this.lstDeporte.TabIndex = 8;
+            this.lstDeporte.SelectedIndexChanged += new System.EventHandler(this.lstDeporte_SelectedIndexChanged);
             // 
             // lblEdad
             // 
@@ -172,6 +176,7 @@
             this.txtApellido.ShortcutsEnabled = false;
             this.txtApellido.Size = new System.Drawing.Size(179, 27);
             this.txtApellido.TabIndex = 4;
+            this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // mskTelefono
@@ -184,6 +189,7 @@
             this.mskTelefono.Size = new System.Drawing.Size(179, 27);
             this.mskTelefono.TabIndex = 6;
             this.mskTelefono.ValidatingType = typeof(int);
+            this.mskTelefono.TextChanged += new System.EventHandler(this.mskTelefono_TextChanged);
             // 
             // lblTelefono
             // 
@@ -227,6 +233,7 @@
             this.mskEdad.Name = "mskEdad";
             this.mskEdad.Size = new System.Drawing.Size(44, 27);
             this.mskEdad.TabIndex = 7;
+            this.mskEdad.TextChanged += new System.EventHandler(this.mskEdad_TextChanged);
             // 
             // txtCodigoDeportista
             // 
@@ -267,7 +274,7 @@
             // cmdEliminar
             // 
             this.cmdEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdEliminar.Location = new System.Drawing.Point(14, 394);
+            this.cmdEliminar.Location = new System.Drawing.Point(10, 382);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(110, 38);
             this.cmdEliminar.TabIndex = 9;
@@ -278,7 +285,7 @@
             // cmdModificar
             // 
             this.cmdModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdModificar.Location = new System.Drawing.Point(134, 394);
+            this.cmdModificar.Location = new System.Drawing.Point(130, 382);
             this.cmdModificar.Name = "cmdModificar";
             this.cmdModificar.Size = new System.Drawing.Size(110, 38);
             this.cmdModificar.TabIndex = 10;
@@ -289,7 +296,7 @@
             // cmdGuardar
             // 
             this.cmdGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdGuardar.Location = new System.Drawing.Point(256, 394);
+            this.cmdGuardar.Location = new System.Drawing.Point(252, 382);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(110, 38);
             this.cmdGuardar.TabIndex = 11;
@@ -308,11 +315,23 @@
             this.cmdSalir.UseVisualStyleBackColor = true;
             this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
             // 
+            // cmdCancelar
+            // 
+            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.Location = new System.Drawing.Point(130, 432);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(110, 38);
+            this.cmdCancelar.TabIndex = 88;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.UseVisualStyleBackColor = true;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
+            // 
             // frmBuscarDeportista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 470);
+            this.ClientSize = new System.Drawing.Size(386, 480);
+            this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.cmdGuardar);
             this.Controls.Add(this.cmdEliminar);
@@ -356,5 +375,6 @@
         private System.Windows.Forms.Button cmdModificar;
         private System.Windows.Forms.Button cmdGuardar;
         private System.Windows.Forms.Button cmdSalir;
+        private System.Windows.Forms.Button cmdCancelar;
     }
 }

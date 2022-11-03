@@ -37,6 +37,7 @@ namespace pryVelezBaseDeDatos
         }
         private void cmdConsultar_Click(object sender, EventArgs e)
         {
+            GrillaDeportista.DataSource = null;
             GrillaDeportista.Rows.Clear();
             //Instanciamos
             clsDeportista ListarEnGrilla = new clsDeportista();

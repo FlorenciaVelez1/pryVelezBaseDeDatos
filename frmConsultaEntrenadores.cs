@@ -33,6 +33,7 @@ namespace pryVelezBaseDeDatos
         }
         private void cmdConsultar_Click(object sender, EventArgs e)
         {
+            GrillaEntrenador.DataSource = null;
             GrillaEntrenador.Rows.Clear();
             //Instanciamos
             clsEntrenador  ListarGrilla = new clsEntrenador();

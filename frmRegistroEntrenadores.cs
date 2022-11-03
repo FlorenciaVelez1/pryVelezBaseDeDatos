@@ -53,6 +53,7 @@ namespace pryVelezBaseDeDatos
         }
         private void frmRegistroEntrenadores_Load(object sender, EventArgs e)
         {
+            txtCodigoDeportista.Focus();
             try
             {
                 OleDbConnection Conexion = new OleDbConnection();
@@ -67,6 +68,7 @@ namespace pryVelezBaseDeDatos
             {
                 StatusConexion.BackColor = Color.Red;
             }
+            cmdRegistrar.Enabled = false;
         }
         private void txtCodigoDeportista_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -100,5 +102,41 @@ namespace pryVelezBaseDeDatos
                 MessageBox.Show("Solo se aceptan letras");
             }
         }
+        public void Chequeo()
+        {
+            if (txtCodigoDeportista.Text != "" & txtNombre.Text != "" & txtApellido.Text != "" & txtDireccion.Text != "" & txtProvincia.Text != "" & lstDeporte.SelectedIndex >= 0)
+            {
+                cmdRegistrar.Enabled = true;
+            }
+            else
+            {
+                cmdRegistrar.Enabled = false;    
+            }
+        }
+        private void txtCodigoDeportista_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void txtProvincia_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void lstDeporte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
     }
+
 }

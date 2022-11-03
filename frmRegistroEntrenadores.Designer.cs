@@ -117,7 +117,7 @@
             // cmdLimpiar
             // 
             this.cmdLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdLimpiar.Location = new System.Drawing.Point(129, 320);
+            this.cmdLimpiar.Location = new System.Drawing.Point(144, 320);
             this.cmdLimpiar.Name = "cmdLimpiar";
             this.cmdLimpiar.Size = new System.Drawing.Size(110, 38);
             this.cmdLimpiar.TabIndex = 8;
@@ -128,7 +128,7 @@
             // cmdRegistrar
             // 
             this.cmdRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdRegistrar.Location = new System.Drawing.Point(251, 320);
+            this.cmdRegistrar.Location = new System.Drawing.Point(279, 320);
             this.cmdRegistrar.Name = "cmdRegistrar";
             this.cmdRegistrar.Size = new System.Drawing.Size(110, 38);
             this.cmdRegistrar.TabIndex = 9;
@@ -153,7 +153,7 @@
             this.mrcInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcInformacion.Location = new System.Drawing.Point(12, 12);
             this.mrcInformacion.Name = "mrcInformacion";
-            this.mrcInformacion.Size = new System.Drawing.Size(349, 288);
+            this.mrcInformacion.Size = new System.Drawing.Size(377, 288);
             this.mrcInformacion.TabIndex = 79;
             this.mrcInformacion.TabStop = false;
             this.mrcInformacion.Text = "Informacion Entrenador";
@@ -172,73 +172,79 @@
             "ATLETISMO",
             "PADEL",
             "HANDBALL"});
-            this.lstDeporte.Location = new System.Drawing.Point(169, 232);
+            this.lstDeporte.Location = new System.Drawing.Point(193, 233);
             this.lstDeporte.Margin = new System.Windows.Forms.Padding(4);
             this.lstDeporte.Name = "lstDeporte";
             this.lstDeporte.Size = new System.Drawing.Size(156, 28);
             this.lstDeporte.TabIndex = 6;
+            this.lstDeporte.SelectedIndexChanged += new System.EventHandler(this.lstDeporte_SelectedIndexChanged);
             // 
             // txtProvincia
             // 
             this.txtProvincia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProvincia.Location = new System.Drawing.Point(169, 190);
+            this.txtProvincia.Location = new System.Drawing.Point(193, 191);
             this.txtProvincia.Margin = new System.Windows.Forms.Padding(4);
             this.txtProvincia.MaxLength = 15;
             this.txtProvincia.Name = "txtProvincia";
             this.txtProvincia.ShortcutsEnabled = false;
             this.txtProvincia.Size = new System.Drawing.Size(156, 27);
             this.txtProvincia.TabIndex = 5;
+            this.txtProvincia.TextChanged += new System.EventHandler(this.txtProvincia_TextChanged);
             this.txtProvincia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProvincia_KeyPress);
             // 
             // txtDireccion
             // 
             this.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(169, 148);
+            this.txtDireccion.Location = new System.Drawing.Point(193, 149);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.MaxLength = 25;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(156, 27);
             this.txtDireccion.TabIndex = 4;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // txtApellido
             // 
             this.txtApellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(169, 112);
+            this.txtApellido.Location = new System.Drawing.Point(193, 113);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.MaxLength = 15;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.ShortcutsEnabled = false;
             this.txtApellido.Size = new System.Drawing.Size(156, 27);
             this.txtApellido.TabIndex = 3;
+            this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtCodigoDeportista
             // 
             this.txtCodigoDeportista.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodigoDeportista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoDeportista.Location = new System.Drawing.Point(169, 41);
+            this.txtCodigoDeportista.Location = new System.Drawing.Point(193, 42);
             this.txtCodigoDeportista.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigoDeportista.MaxLength = 5;
             this.txtCodigoDeportista.Name = "txtCodigoDeportista";
             this.txtCodigoDeportista.ShortcutsEnabled = false;
             this.txtCodigoDeportista.Size = new System.Drawing.Size(156, 27);
             this.txtCodigoDeportista.TabIndex = 1;
+            this.txtCodigoDeportista.TextChanged += new System.EventHandler(this.txtCodigoDeportista_TextChanged);
             this.txtCodigoDeportista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoDeportista_KeyPress);
             // 
             // txtNombre
             // 
             this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(169, 77);
+            this.txtNombre.Location = new System.Drawing.Point(193, 78);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 15;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(156, 27);
             this.txtNombre.TabIndex = 2;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // cmdSalir
@@ -257,7 +263,7 @@
             this.StatusConexion.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.StatusConexion.Location = new System.Drawing.Point(0, 381);
             this.StatusConexion.Name = "StatusConexion";
-            this.StatusConexion.Size = new System.Drawing.Size(384, 22);
+            this.StatusConexion.Size = new System.Drawing.Size(401, 22);
             this.StatusConexion.TabIndex = 81;
             this.StatusConexion.Text = "statusStrip1";
             // 
@@ -265,7 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 403);
+            this.ClientSize = new System.Drawing.Size(401, 403);
             this.Controls.Add(this.StatusConexion);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.mrcInformacion);

@@ -36,6 +36,7 @@ namespace pryVelezBaseDeDatos
             {
                 StatusConexion.BackColor = Color.Red;
             }
+            cmdRegistrar.Enabled = false;
         }
         private void Limpiar()
         {
@@ -66,7 +67,7 @@ namespace pryVelezBaseDeDatos
         }
         private void Chequeo()
         {
-            if (txtCodigoDeportista.Text != "" & txtNombre.Text != "" & txtApellido.Text != "" & txtDireccion.Text != "" & txtDireccion.Text != "" & mskTelefono.Text != "" & mskEdad.Text != "" & lstDeporte.SelectedIndex > 0)
+            if (txtCodigoDeportista.Text != "" & txtNombre.Text != "" & txtApellido.Text != "" & txtDireccion.Text != "" & txtDireccion.Text != "" & mskTelefono.Text != "" & mskEdad.Text != "" & lstDeporte.SelectedIndex >= 0)
             {
                 cmdRegistrar.Enabled = true;
             }
@@ -88,14 +89,6 @@ namespace pryVelezBaseDeDatos
             Chequeo();
         }
         private void txtDireccion_TextChanged(object sender, EventArgs e)
-        {
-            Chequeo();
-        }
-        private void mskTelefono_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-            Chequeo();
-        }
-        private void mskEdad_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             Chequeo();
         }
@@ -130,6 +123,27 @@ namespace pryVelezBaseDeDatos
         private void cmdLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
+        }
+        private void mskEdad_MaskChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void mskEdad_Leave(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void mskTelefono_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void mskEdad_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+
+        private void mskTelefono_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

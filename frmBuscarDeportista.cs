@@ -16,7 +16,6 @@ namespace pryVelezBaseDeDatos
         {
             InitializeComponent();
         }
-
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
             clsDeportista BuscarDeportista = new clsDeportista();
@@ -33,20 +32,21 @@ namespace pryVelezBaseDeDatos
                 mskTelefono.Text = Convert.ToString(BuscarDeportista.TelefonoDep);
                 mskEdad.Text = Convert.ToString(BuscarDeportista.EdadDep);
                 lstDeporte.Text = Convert.ToString(BuscarDeportista.DeportesDep);
-                //No se pueden editar las txt
-                txtNombre.ReadOnly = true;
-                txtApellido.ReadOnly = true;
-                txtDireccion.ReadOnly = true;
-                mskTelefono.ReadOnly = true;
-                mskEdad.ReadOnly = true;
-                lstDeporte.Enabled = false;
                 //habilito los botones
                 cmdEliminar.Enabled = true;
                 cmdGuardar.Enabled = true;
                 cmdModificar.Enabled = true;
-
+                NoEditarTXT();
             }
-
+        }
+        private void NoEditarTXT()
+        {
+            txtNombre.ReadOnly = true;
+            txtApellido.ReadOnly = true;
+            txtDireccion.ReadOnly = true;
+            mskTelefono.ReadOnly = true;
+            mskEdad.ReadOnly = true;
+            lstDeporte.Enabled = false;
         }
         private void txtCodigoDeportista_TextChanged(object sender, EventArgs e)
         {
@@ -61,6 +61,7 @@ namespace pryVelezBaseDeDatos
             cmdEliminar.Enabled = false;
             cmdModificar.Enabled = false;
             cmdGuardar.Enabled = true;
+            cmdCancelar.Visible = true;
             //Habilito los txt y lst para editar
             txtNombre.ReadOnly = false;
             txtApellido.ReadOnly = false;
@@ -83,7 +84,6 @@ namespace pryVelezBaseDeDatos
             MessageBox.Show("La informacion ha sido modificada exitosamente.");
             Limpiar();
         }
-
         private void Limpiar()
         {
             //Limpio los txt y lst
@@ -98,13 +98,7 @@ namespace pryVelezBaseDeDatos
             cmdEliminar.Enabled = false;
             cmdModificar.Enabled = false;
             cmdGuardar.Enabled = false;
-            //No se editan los txt y lst
-            txtNombre.ReadOnly = true;
-            txtApellido.ReadOnly = true;
-            txtDireccion.ReadOnly = true;
-            mskTelefono.ReadOnly = true;
-            mskEdad.ReadOnly = true;
-            lstDeporte.Enabled = false;
+            NoEditarTXT();
             txtCodigoDeportista.Focus();
         }
         private void cmdEliminar_Click(object sender, EventArgs e)
@@ -121,6 +115,14 @@ namespace pryVelezBaseDeDatos
         }
         private void frmBuscarDeportista_Load(object sender, EventArgs e)
         {
+            //Deshabilito los botones
+            cmdEliminar.Enabled = false;
+            cmdModificar.Enabled = false;
+            cmdGuardar.Enabled = false;
+            cmdBuscar.Enabled = false;
+            cmdCancelar.Visible = false;
+            NoEditarTXT();
+            txtCodigoDeportista.Focus();
             try
             {
                 OleDbConnection Conexion = new OleDbConnection();
@@ -160,6 +162,50 @@ namespace pryVelezBaseDeDatos
                 e.Handled = true;
                 MessageBox.Show("Solo se aceptan letras");
             }
+        }
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            NoEditarTXT();
+            //habilito  o no los botones
+            cmdEliminar.Enabled = true;
+            cmdModificar.Enabled = true;
+            cmdGuardar.Enabled = false;
+            cmdCancelar.Visible = false;
+        }
+        private void Chequeo()
+        {
+            if (txtCodigoDeportista.Text != "" & txtNombre.Text != "" & txtApellido.Text != "" & txtDireccion.Text != "" & txtDireccion.Text != "" & mskTelefono.Text != "" & mskEdad.Text != "" & lstDeporte.SelectedIndex >= 0)
+            {
+                cmdGuardar.Enabled = true;
+            }
+            else
+            {
+                cmdGuardar.Enabled = false;
+            }
+        }
+        private void mskEdad_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void lstDeporte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void mskTelefono_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
         }
     }
 }

@@ -101,7 +101,7 @@
             this.mskTelefono.Size = new System.Drawing.Size(132, 27);
             this.mskTelefono.TabIndex = 5;
             this.mskTelefono.ValidatingType = typeof(int);
-            this.mskTelefono.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskTelefono_MaskInputRejected);
+            this.mskTelefono.TextChanged += new System.EventHandler(this.mskTelefono_TextChanged);
             // 
             // lblApellido
             // 
@@ -122,7 +122,7 @@
             this.mskEdad.Name = "mskEdad";
             this.mskEdad.Size = new System.Drawing.Size(55, 27);
             this.mskEdad.TabIndex = 6;
-            this.mskEdad.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskEdad_MaskInputRejected);
+            this.mskEdad.TextChanged += new System.EventHandler(this.mskEdad_TextChanged);
             // 
             // lblDireccion
             // 

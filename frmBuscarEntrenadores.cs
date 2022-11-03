@@ -31,15 +31,10 @@ namespace pryVelezBaseDeDatos
                 txtDireccion.Text = BuscarEntrenador.Direccion;
                 txtProvincia.Text = BuscarEntrenador.Provincia;
                 lstDeporte.Text = Convert.ToString(BuscarEntrenador.Deporte);
-                //No se pueden editar las txt
-                txtNombre.ReadOnly = true;
-                txtApellido.ReadOnly = true;
-                txtDireccion.ReadOnly = true;
-                txtProvincia.ReadOnly = true;
-                lstDeporte.Enabled = false;
+                NoEditarTXT();
                 //habilito los botones
                 cmdEliminar.Enabled = true;
-                cmdGuardar.Enabled = true;
+                cmdGuardar.Enabled = false;
                 cmdModificar.Enabled = true;
             }
         }
@@ -49,12 +44,21 @@ namespace pryVelezBaseDeDatos
             cmdEliminar.Enabled = false;
             cmdModificar.Enabled = false;
             cmdGuardar.Enabled = true;
+            cmdCancelar.Visible = true;
             //Habilito los txt y lst para editar
             txtNombre.ReadOnly = false;
             txtApellido.ReadOnly = false;
             txtDireccion.ReadOnly = false;
             txtProvincia.ReadOnly = false;
             lstDeporte.Enabled = true;
+        }
+        private void NoEditarTXT()
+        {
+            txtNombre.ReadOnly = true;
+            txtApellido.ReadOnly = true;
+            txtDireccion.ReadOnly = true;
+            txtProvincia.ReadOnly = true;
+            lstDeporte.Enabled = false;
         }
         private void Limpiar()
         {
@@ -69,12 +73,7 @@ namespace pryVelezBaseDeDatos
             cmdEliminar.Enabled = false;
             cmdModificar.Enabled = false;
             cmdGuardar.Enabled = false;
-            //No se pueden editar los txt
-            txtNombre.ReadOnly = true;
-            txtApellido.ReadOnly = true;
-            txtDireccion.ReadOnly = true;
-            txtProvincia.ReadOnly = true;
-            lstDeporte.Enabled = false;
+            NoEditarTXT();
             txtCodigoDeportista.Focus();
         }
         private void cmdGuardar_Click(object sender, EventArgs e)
@@ -100,6 +99,14 @@ namespace pryVelezBaseDeDatos
         }
         private void frmBuscarEntrenadores_Load(object sender, EventArgs e)
         {
+            NoEditarTXT();
+            txtCodigoDeportista.Focus();
+            //Cancelar los cmd
+            cmdBuscar.Enabled = false;
+            cmdEliminar.Enabled = false;
+            cmdGuardar.Enabled = false; 
+            cmdModificar.Enabled = false;
+            cmdCancelar.Visible = false;
             try
             {
                 OleDbConnection Conexion = new OleDbConnection();
@@ -150,6 +157,51 @@ namespace pryVelezBaseDeDatos
                 e.Handled = true;
                 MessageBox.Show("Solo se aceptan letras");
             }
+        }
+
+        private void txtCodigoDeportista_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigoDeportista.Text != "")
+            {
+                cmdBuscar.Enabled = true;
+            }
+        }
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            NoEditarTXT();
+            //habilito  o no los botones
+            cmdEliminar.Enabled = true;
+            cmdModificar.Enabled = true; 
+            cmdGuardar.Enabled = false;
+            cmdCancelar.Visible = false;
+        }
+        public void Chequeo()
+        {
+            if (txtCodigoDeportista.Text != "" & txtNombre.Text != "" & txtApellido.Text != "" & txtDireccion.Text != "" & txtProvincia.Text != "")
+            {
+                cmdGuardar.Enabled = true;
+            }
+            else
+            {
+                cmdGuardar.Enabled = false;
+            }
+        }
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
+        }
+        private void txtProvincia_TextChanged(object sender, EventArgs e)
+        {
+            Chequeo();
         }
     }
 }
