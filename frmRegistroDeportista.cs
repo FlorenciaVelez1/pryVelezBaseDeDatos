@@ -15,6 +15,7 @@ namespace pryVelezBaseDeDatos
         public frmRegistroDeportista()
         {
             InitializeComponent();
+            txtCodigoDeportista.Focus();
         }
         private void cmdSalir_Click(object sender, EventArgs e)
         {
@@ -124,14 +125,6 @@ namespace pryVelezBaseDeDatos
         {
             Limpiar();
         }
-        private void mskEdad_MaskChanged(object sender, EventArgs e)
-        {
-            Chequeo();
-        }
-        private void mskEdad_Leave(object sender, EventArgs e)
-        {
-            Chequeo();
-        }
         private void mskTelefono_TextChanged(object sender, EventArgs e)
         {
             Chequeo();
@@ -139,11 +132,6 @@ namespace pryVelezBaseDeDatos
         private void mskEdad_TextChanged(object sender, EventArgs e)
         {
             Chequeo();
-        }
-
-        private void mskTelefono_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
         }
     }
 }

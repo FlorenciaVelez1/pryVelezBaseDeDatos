@@ -120,7 +120,7 @@
             this.cmdLimpiar.Location = new System.Drawing.Point(144, 320);
             this.cmdLimpiar.Name = "cmdLimpiar";
             this.cmdLimpiar.Size = new System.Drawing.Size(110, 38);
-            this.cmdLimpiar.TabIndex = 8;
+            this.cmdLimpiar.TabIndex = 9;
             this.cmdLimpiar.Text = "Limpiar";
             this.cmdLimpiar.UseVisualStyleBackColor = true;
             this.cmdLimpiar.Click += new System.EventHandler(this.cmdLimpiar_Click);
@@ -131,7 +131,7 @@
             this.cmdRegistrar.Location = new System.Drawing.Point(279, 320);
             this.cmdRegistrar.Name = "cmdRegistrar";
             this.cmdRegistrar.Size = new System.Drawing.Size(110, 38);
-            this.cmdRegistrar.TabIndex = 9;
+            this.cmdRegistrar.TabIndex = 10;
             this.cmdRegistrar.Text = "Registrar";
             this.cmdRegistrar.UseVisualStyleBackColor = true;
             this.cmdRegistrar.Click += new System.EventHandler(this.cmdRegistrar_Click);
@@ -154,7 +154,7 @@
             this.mrcInformacion.Location = new System.Drawing.Point(12, 12);
             this.mrcInformacion.Name = "mrcInformacion";
             this.mrcInformacion.Size = new System.Drawing.Size(377, 288);
-            this.mrcInformacion.TabIndex = 79;
+            this.mrcInformacion.TabIndex = 1;
             this.mrcInformacion.TabStop = false;
             this.mrcInformacion.Text = "Informacion Entrenador";
             // 
@@ -176,7 +176,7 @@
             this.lstDeporte.Margin = new System.Windows.Forms.Padding(4);
             this.lstDeporte.Name = "lstDeporte";
             this.lstDeporte.Size = new System.Drawing.Size(156, 28);
-            this.lstDeporte.TabIndex = 6;
+            this.lstDeporte.TabIndex = 7;
             this.lstDeporte.SelectedIndexChanged += new System.EventHandler(this.lstDeporte_SelectedIndexChanged);
             // 
             // txtProvincia
@@ -189,7 +189,7 @@
             this.txtProvincia.Name = "txtProvincia";
             this.txtProvincia.ShortcutsEnabled = false;
             this.txtProvincia.Size = new System.Drawing.Size(156, 27);
-            this.txtProvincia.TabIndex = 5;
+            this.txtProvincia.TabIndex = 6;
             this.txtProvincia.TextChanged += new System.EventHandler(this.txtProvincia_TextChanged);
             this.txtProvincia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProvincia_KeyPress);
             // 
@@ -202,7 +202,7 @@
             this.txtDireccion.MaxLength = 25;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(156, 27);
-            this.txtDireccion.TabIndex = 4;
+            this.txtDireccion.TabIndex = 5;
             this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // txtApellido
@@ -215,7 +215,7 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.ShortcutsEnabled = false;
             this.txtApellido.Size = new System.Drawing.Size(156, 27);
-            this.txtApellido.TabIndex = 3;
+            this.txtApellido.TabIndex = 4;
             this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
@@ -229,7 +229,7 @@
             this.txtCodigoDeportista.Name = "txtCodigoDeportista";
             this.txtCodigoDeportista.ShortcutsEnabled = false;
             this.txtCodigoDeportista.Size = new System.Drawing.Size(156, 27);
-            this.txtCodigoDeportista.TabIndex = 1;
+            this.txtCodigoDeportista.TabIndex = 2;
             this.txtCodigoDeportista.TextChanged += new System.EventHandler(this.txtCodigoDeportista_TextChanged);
             this.txtCodigoDeportista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoDeportista_KeyPress);
             // 
@@ -243,7 +243,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(156, 27);
-            this.txtNombre.TabIndex = 2;
+            this.txtNombre.TabIndex = 3;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -253,7 +253,7 @@
             this.cmdSalir.Location = new System.Drawing.Point(7, 320);
             this.cmdSalir.Name = "cmdSalir";
             this.cmdSalir.Size = new System.Drawing.Size(110, 38);
-            this.cmdSalir.TabIndex = 7;
+            this.cmdSalir.TabIndex = 8;
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.UseVisualStyleBackColor = true;
             this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
