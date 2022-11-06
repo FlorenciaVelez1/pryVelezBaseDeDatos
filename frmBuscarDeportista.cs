@@ -60,6 +60,7 @@ namespace pryVelezBaseDeDatos
             //Deshabilito los botones que no uso
             cmdEliminar.Enabled = false;
             cmdModificar.Enabled = false;
+            cmdBuscar.Enabled = false;
             cmdGuardar.Enabled = true;
             cmdCancelar.Visible = true;
             //Habilito los txt y lst para editar
@@ -169,6 +170,7 @@ namespace pryVelezBaseDeDatos
             //habilito  o no los botones
             cmdEliminar.Enabled = true;
             cmdModificar.Enabled = true;
+            cmdBuscar.Enabled = true;
             cmdGuardar.Enabled = false;
             cmdCancelar.Visible = false;
         }

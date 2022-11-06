@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarDeportista));
             this.StatusConexion = new System.Windows.Forms.StatusStrip();
             this.mrcInformacion = new System.Windows.Forms.GroupBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -341,6 +342,7 @@
             this.Controls.Add(this.txtCodigoDeportista);
             this.Controls.Add(this.lblCodigoDeportista);
             this.Controls.Add(this.StatusConexion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBuscarDeportista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Deportista";

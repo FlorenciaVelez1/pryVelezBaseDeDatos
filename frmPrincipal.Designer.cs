@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.StatusConexion = new System.Windows.Forms.StatusStrip();
             this.lblEstado = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblFechaActual = new System.Windows.Forms.ToolStripStatusLabel();
@@ -169,6 +170,7 @@
             this.ClientSize = new System.Drawing.Size(587, 450);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.StatusConexion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pantalla Principal";

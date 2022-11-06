@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaEntrenadores));
             this.cmdConsultar = new System.Windows.Forms.Button();
             this.cmdSalir = new System.Windows.Forms.Button();
             this.GrillaEntrenador = new System.Windows.Forms.DataGridView();
@@ -90,6 +91,7 @@
             this.Controls.Add(this.cmdConsultar);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.GrillaEntrenador);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultaEntrenadores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Entrenadores";
