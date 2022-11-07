@@ -54,6 +54,10 @@ namespace pryVelezBaseDeDatos
             {
                 cmdBuscar.Enabled = true;
             }
+            else
+            {
+                cmdBuscar.Enabled = false;
+            }
         }
         private void cmdModificar_Click(object sender, EventArgs e)
         {

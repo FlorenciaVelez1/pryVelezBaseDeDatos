@@ -166,6 +166,10 @@ namespace pryVelezBaseDeDatos
             {
                 cmdBuscar.Enabled = true;
             }
+            else
+            {
+                cmdBuscar.Enabled = false;
+            }
         }
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
